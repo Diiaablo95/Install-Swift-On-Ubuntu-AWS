@@ -73,9 +73,9 @@ Note, other things you may consider that we have not covered here:
 
 ### Step 2: Install Swift on Ubuntu Server
 
-* Connect to your Ubuntu Server via SSH using Terminal (see above).
+* If you are not connected, connect to your Ubuntu Server via SSH using Terminal (see above).
 
-* View the Latest Swift snapshots [here](https://swift.org/download/#latest-development-snapshots).  Copy the url for the __Linux__ Platform for your target Ubuntu version.  
+* View the Latest Swift snapshots [here](https://swift.org/download/#latest-development-snapshots).  Copy the url for the Ubuntu 14.04 snapshot.  
 
 * Download the target snapshot. 
 
@@ -83,7 +83,7 @@ Note, other things you may consider that we have not covered here:
     $ wget [your-target-Swift-snapshot]
 ````
 
-For example, at the time of this writing, we found the following for Ubuntu 14.04 __https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz__.  Then the command would be:
+For example, at the time of this writing, we found the following for Ubuntu: 14.04 __https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz__.  Thus the command would be:
 
 ````
     $ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
