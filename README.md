@@ -8,6 +8,16 @@ This repo is a Step-by-Step Guide for performing the following:
 
 ### Step 1: Create an EC2 Server Instance (Ubuntu 14.04)
 
+* To create an Ubuntu Server on AWS - EC2, you must first sign up for an AWS account [here](https://aws.amazon.com/premiumsupport/signup/).
+
+* Once you have an account, go to the [AWS Management Console](https://aws.amazon.com/console/) and login.
+
+* Launch the EC2 Dashboard by clicking on __EC2 Virtual Servers in the Cloud__ (see screenshot below).
+
+![aws-ec2](imgs/aws-ec2.png)
+
+* In the __EC2 Dashboard__, click the __Launch Instance__ button (see screenshot below).
+
 ### Step 2: Install Swift on Ubuntu Server
 
 ### Step 3: Install Server-side Framework for Creating Web Services using Swift (Perfect)
