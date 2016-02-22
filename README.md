@@ -127,7 +127,7 @@ For example:
     $ sudo apt-get install clang libicu-dev
 ````
 
-* Confirm Swift Install.
+* Confirm Swift Is Installed.
 
 ````
     $ swift --version
