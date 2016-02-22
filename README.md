@@ -4,6 +4,8 @@ This repo is a Step-by-Step Guide for performing the following:
 * Installing Swift on Ubuntu Server. 
 * Installing a Server-side framework called [Perfect](http://perfect.org/) for authoring Web Services using Swift.
 
+![swift-ubuntu-terminal](imgs/swift-ubuntu-terminal.png)
+
 ### Step 1: Create an EC2 Server Instance (Ubuntu 14.04)
 
 ### Step 2: Install Swift on Ubuntu Server
