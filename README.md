@@ -20,6 +20,10 @@ This repo is a Step-by-Step Guide for:
 
 ![aws-ec2](imgs/aws-launch-instance.png)
 
+* Choose the Amazon Machine Image (AMI) named __Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-9abea4fb__ (see screenshot below).
+
+![aws-ec2](imgs/aws-ubuntu-ami.png)
+
 ### Step 2: Install Swift on Ubuntu Server
 
 ### Step 3: Install Server-side Framework for Creating Web Services using Swift (Perfect)
