@@ -1,8 +1,9 @@
-# Server Side Swift: Installing on Ubuntu Server 14.04
+# Server Side Swift: Installing on Ubuntu Server 14.04 using Amazon Web Services EC2
 
 This repo is a Step-by-Step Guide for:
 * Standing up an Ubuntu Server (14.04) using Amazon Web Services [(AWS)](https://aws.amazon.com/) - Elastic Compute Cloud [(EC2).](https://aws.amazon.com/ec2/?nc2=h_l3_c)
 * Installing [Swift](https://developer.apple.com/swift/) on Ubuntu Server. 
+* Playing with Server Side Swift via the [Swift REPL](https://developer.apple.com/swift/blog/?id=18).
 
 ![swift-ubuntu-terminal](imgs/swift-ubuntu-terminal.png)
 
@@ -80,45 +81,83 @@ Note, other things you may consider that we have not covered here:
 * Download the target snapshot from Apple using the wget command. 
 
 ````
-$ wget [your-target-Swift-snapshot]
+    $ wget [your-target-Swift-snapshot]
 
-For example:
-$ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+    For example:
+    $ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
 ````
 
 * Extract the snapshot using the tar command.
 
 ````
-$ tar -xvzf [your-swift-snapshot]
+    $ tar -xvzf [your-swift-snapshot]
 
-For example:
-$ tar -xvzf swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+    For example:
+    $ tar -xvzf swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
 ````
 
 * Update the PATH environment variable.
 
 ````
-$ export PATH=/path/to/Swift/usr/bin:"${PATH}"
+    $ export PATH=/path/to/Swift/usr/bin:"${PATH}"
 
-For example:
-$ cd swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin
-$ pwd
-$ export PATH=/home/ubuntu/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin:$PATH
+    For example:
+    $ cd swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin
+    $ pwd
+    $ export PATH=/home/ubuntu/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin:$PATH
 ````
 
 * Install Swift. 
 
 ````
-$ cd ~
-$ sudo apt-get update
-$ sudo apt-get install clang
+    $ cd ~
+    $ sudo apt-get update
+    $ sudo apt-get install clang
 ````
 
 * Confirm Swift Is Installed.
 
 ````
-$ swift --version
+    $ swift --version
 ````
+
+### Step 3: Playing with Server Side Swift using the Swift REPL
+
+* In Terminal, launch the __Read Eval Print Loop (i.e. REPL)__ by executing the swift command.  This will let us play with Swift on the Server via Terminal.
+
+````
+    $ swift
+````
+
+* Create a constant.
+
+````
+    $ let targetServer = "Ubuntu 14.04"
+````
+
+* Create a print statement.
+
+````
+    $ print("Hello Server Side Swift on \(targetServer)")
+````
+
+* You should see __Hello Server Side Swift on Ubuntu 14.04__
+
+* Exit the REPL.
+
+````
+    $ q: 
+````
+
+### Clean Up
+
+* To exit from your SSH connection to your Ubuntu Server, simply do:
+
+````
+    $ exit
+````
+
+* To terminate your AWS Ubuntu Server, [see here.](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html)
 
 ### Connect
 * Twitter: [@clintcabanero](http://twitter.com/clintcabanero)
