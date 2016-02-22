@@ -1,4 +1,5 @@
-# Installing Server Side Swift on AWS
+# Server Side Swift: Installing on Ubuntu Server 14.04
+
 This repo is a Step-by-Step Guide for:
 * Standing up an Ubuntu Server (14.04) using Amazon Web Services [(AWS)](https://aws.amazon.com/) - Elastic Compute Cloud [(EC2).](https://aws.amazon.com/ec2/?nc2=h_l3_c)
 * Installing [Swift](https://developer.apple.com/swift/) on Ubuntu Server. 
@@ -64,7 +65,7 @@ For example, if your key pair is called __UbuntuSwiftKey.pem__ and your Ubuntu S
 
 ![ubuntu-welcome](imgs/ubuntu-welcome.png)
 
-You just completed the first step - standing up an Ubuntu Server using Amazon Web Services - Elastic Computing Cloud (EC2).  In the next step, you will install __Server Side Swift__!!!
+You just completed the first step - standing up an Ubuntu Server using Amazon Web Services - Elastic Computing Cloud (EC2).  In the next step, you will install __Swift on the Server__!!!
 
 Note, other things you may consider that we have not covered here:
 * Updating your Security Group to only allow connections from your computer. [Read about it here](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html).
@@ -72,65 +73,51 @@ Note, other things you may consider that we have not covered here:
 
 ### Step 2: Install Swift on Ubuntu Server
 
-* If you are not connected, connect to your Ubuntu Server via SSH using Terminal (see above).
+* If needed, connect to your Ubuntu Server via SSH using Terminal (see above).
 
-* View the Latest Swift snapshots [here](https://swift.org/download/#latest-development-snapshots).  Copy the url for the Ubuntu 14.04 snapshot.  
+* For quickness and ease, we will start by using an Apple provided snapshot of Swift that we can install on Ubuntu Server 14.04.  View the Latest Swift snapshots [here](https://swift.org/download/#latest-development-snapshots).  Copy the url for the Ubuntu 14.04 snapshot.  
 
-* Download the target snapshot. 
-
-````
-    $ wget [your-target-Swift-snapshot]
-````
-
-For example, at the time of this writing, we found the following for snapshot URL for Ubuntu: 14.04:
-
-__https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz__.  
-
-Thus the command would be:
+* Download the target snapshot from Apple using the wget command. 
 
 ````
-    $ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
-````
-
-* Extract the snapshot.
-
-````
-     $ tar -xvzf [your-swift-snapshot]
-````
+$ wget [your-target-Swift-snapshot]
 
 For example:
-
-````
-    $ tar -xvzf swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+$ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
 ````
 
-* Export path.
+* Extract the snapshot using the tar command.
 
 ````
-    $ export PATH=/path/to/Swift/usr/bin:"${PATH}"
-
-````
+$ tar -xvzf [your-swift-snapshot]
 
 For example:
+$ tar -xvzf swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+````
+
+* Update the PATH environment variable.
 
 ````
-    $ cd swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin
-    $ pwd
-    $ export PATH=/home/ubuntu/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin:$PATH
+$ export PATH=/path/to/Swift/usr/bin:"${PATH}"
+
+For example:
+$ cd swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin
+$ pwd
+$ export PATH=/home/ubuntu/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin:$PATH
 ````
 
 * Install Swift. 
 
 ````
-    $ cd ~
-    $ sudo apt-get update
-    $ sudo apt-get install clang libicu-dev
+$ cd ~
+$ sudo apt-get update
+$ sudo apt-get install clang libicu-dev
 ````
 
 * Confirm Swift Is Installed.
 
 ````
-    $ swift --version
+$ swift --version
 ````
 
 ### Connect
