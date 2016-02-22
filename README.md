@@ -133,10 +133,6 @@ For example:
     $ swift --version
 ````
 
-### Next Steps: Install Server-side Framework for Creating Web Services using Swift
-
-IN PROGRESS!
-
 ### Connect
 * Twitter: [@clintcabanero](http://twitter.com/clintcabanero)
 * GitHub: [ccabanero](http:///github.com/ccabanero)
