@@ -1,8 +1,8 @@
 # Installing Server Side Swift on AWS
 This repo is a Step-by-Step Guide for:
 * Standing up an Ubuntu Server (14.04) using Amazon Web Services [(AWS)](https://aws.amazon.com/) - Elastic Compute Cloud [(EC2).](https://aws.amazon.com/ec2/?nc2=h_l3_c)
-* Installing Swift on Ubuntu Server. 
-* Installing a Server-side framework called [Perfect](http://perfect.org/) for authoring Web Services using [Swift](https://developer.apple.com/swift/).
+* Installing [Swift](https://developer.apple.com/swift/) on Ubuntu Server. 
+* Installing a Server-side framework called [Perfect](http://perfect.org/) for authoring Web Services using [Swift](https://swift.org/).
 
 ![swift-ubuntu-terminal](imgs/swift-ubuntu-terminal.png)
 
@@ -24,9 +24,13 @@ This repo is a Step-by-Step Guide for:
 
 ![aws-ubuntu-ami](imgs/aws-ubuntu-ami.png)
 
-* Choose an Instance Type.  You can learn more about different EC2 Instance types [here](https://aws.amazon.com/ec2/instance-types/). Note, as you increase the properties of your instance (e.g. increase CPU, Memory, etc.) you will be charged more per hour.  We will choose the Type: __t2.micro__ (see screenshot below).
+* Choose an Instance Type.  You can learn more about different EC2 Instance types [here](https://aws.amazon.com/ec2/instance-types/). Note, as you increase the properties of your instance (e.g. increase CPU, Memory, etc.) you will be charged more per hour.  We will choose the Type: __t2.micro__ (see screenshot below).  Proceed by clicking the __Review and Launch__ button.
 
 ![aws-instance-type](imgs/aws-instance-type.png)
+
+* Review the EC2 Instance details then click the __Launch__ button.  You will be prompted to select an existing key pair or create a new one.  Note, a key pair is __required__ to connect to your server.  If you don't have one, choose __Create a new key pair__.  Provide a name.  Finally, click the __Download_Key_Pair__.
+
+![aws-create-keypair](imgs/aws-create-keypair.png)
 
 ### Step 2: Install Swift on Ubuntu Server
 
