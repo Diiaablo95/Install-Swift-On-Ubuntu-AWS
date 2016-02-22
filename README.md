@@ -28,13 +28,46 @@ This repo is a Step-by-Step Guide for:
 
 ![aws-instance-type](imgs/aws-instance-type.png)
 
-* Review the EC2 Instance details then click the __Launch__ button.  You will be prompted to select an existing key pair or create a new one.  Note, a key pair is __required__ to connect to your server.  If you don't have one, choose __Create a new key pair__.  Provide a name and click the __Download Key Pair__ button.  After your keypair is downloaded (it has a .pem file extension), click the __Launch Instance__ button (see screenshot below).
+* Review the EC2 Instance details then click the __Launch__ button.  You will be prompted to select an existing key pair or create a new one.  Note, a key pair is __required__ to connect to your server.  If you don't have one, choose __Create a new key pair__.  Provide a name (e.g. UbuntuSwiftKey)and click the __Download Key Pair__ button.  After your keypair is downloaded (it has a .pem file extension), click the __Launch Instance__ button (see screenshot below).  
 
 ![aws-create-keypair](imgs/aws-create-keypair.png)
 
-* Return to the __EC2 Dashboard__ and click on the __Instances__ section on the left (see screenshow below).  Wait a few mintues for your Instance State to be __running__ and the Status Checks to list __2/2 checks passed__.  Before you connect to your Ubuntu Server, take note of the Public DNS.  For example, __ec2-54-213-187-216.us-west-2.compute.amazonaws.com__.
+* Return to the __EC2 Dashboard__ and click on the __Instances__ section on the left (see screenshow below).  Wait a few mintues for your Instance State to be __running__ and the Status Checks to list __2/2 checks passed__.  Before you connect to your Ubuntu Server, take note of the Public DNS.  For example, it will resemble the following __ec2-54-213-187-216.us-west-2.compute.amazonaws.com__.  
 
 ![aws-ec2-instances](imgs/aws-ec2-instances.png)
+
+* Navigate to your key pair.  Use Terminal to navigate to your key pair (e.g. UbuntuSwiftKey.pem file).  For example, if your key pair is in your Downloads folder you would execute.
+
+````
+    $ cd ~/Downloads
+````
+
+* Change Access Permissions.  Using Terminal, use the __chmod__ dommand to make sure your key pair isn't publicly viewable.  For example, if your key pair is called UbuntuSwiftKey.pem you would execute:
+
+````
+    $ chmod 400 UbuntuSwiftKey.pem
+````
+
+
+* Using Terminal, connect to your server via SSH by the following command below:
+
+````
+    $ ssh -i MyKeyPair.pem ubuntu@MyPublicDNS
+````
+
+For example, if your key pair is called __UbuntuSwiftKey.pem__ and your Ubuntu Server's Public DNS is __ec2-54-213-187-216.us-west-2.compute.amazonaws.com__.  Then you can connect wiht the following:
+
+````
+    $ ssh -i UbuntuSwiftKey.pem ubuntu@ec2-54-213-187-216.us-west-2.compute.amazonaws.com
+````
+
+* Confirm that you have successfully connected (see screenshot below).
+
+![ubuntu-welcome](imgs/ubuntu-welcome.png)
+
+Other things to consider not covered here:
+* Updating your Security Group to only allow connections from your computer.
+* Using Elastic IPs.
 
 ### Step 2: Install Swift on Ubuntu Server
 
