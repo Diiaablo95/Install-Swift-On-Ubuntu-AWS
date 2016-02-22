@@ -2,7 +2,6 @@
 This repo is a Step-by-Step Guide for:
 * Standing up an Ubuntu Server (14.04) using Amazon Web Services [(AWS)](https://aws.amazon.com/) - Elastic Compute Cloud [(EC2).](https://aws.amazon.com/ec2/?nc2=h_l3_c)
 * Installing [Swift](https://developer.apple.com/swift/) on Ubuntu Server. 
-* Installing a Server-side framework called [Perfect](http://perfect.org/) for authoring Web Services using [Swift](https://swift.org/). THIS IS IN PROGRESS
 
 ![swift-ubuntu-terminal](imgs/swift-ubuntu-terminal.png)
 
@@ -134,9 +133,9 @@ For example:
     $ swift --version
 ````
 
-### Step 3: Install Server-side Framework for Creating Web Services using Swift (Perfect)
+### Next Steps: Install Server-side Framework for Creating Web Services using Swift
 
-COMING SOON!
+IN PROGRESS!
 
 ### Connect
 * Twitter: [@clintcabanero](http://twitter.com/clintcabanero)
