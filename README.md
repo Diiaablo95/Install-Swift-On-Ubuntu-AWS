@@ -111,7 +111,7 @@ $ export PATH=/home/ubuntu/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin:$
 ````
 $ cd ~
 $ sudo apt-get update
-$ sudo apt-get install clang libicu-dev
+$ sudo apt-get install clang
 ````
 
 * Confirm Swift Is Installed.
