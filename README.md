@@ -49,7 +49,7 @@ This repo is a Step-by-Step Guide for:
 ````
 
 
-* Connect to Server.  Using Terminal, connect to your server via SSH with the following command below:
+* Connect to Ubuntu Server.  Using Terminal, connect to your server via SSH with the following command below:
 
 ````
     $ ssh -i [MyKeyPair].pem ubuntu@[MyPublicDNS]
@@ -65,11 +65,29 @@ For example, if your key pair is called __UbuntuSwiftKey.pem__ and your Ubuntu S
 
 ![ubuntu-welcome](imgs/ubuntu-welcome.png)
 
-Other things you may consider that we have not covered here:
-* Updating your Security Group to only allow connections from your computer [read about it here](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
-* Assinging an Elastic IP Address to your EC2 instance [read about it here](http://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/getting-started-assign-eip.html).
+You just completed the first step - standing up an Ubuntu Server using Amazon Web Services - Elastic Computing Cloud (EC2).  In the next step, you will install __Server Side Swift__!!!
+
+Note, other things you may consider that we have not covered here:
+* Updating your Security Group to only allow connections from your computer. [Read about it here](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
+* Assinging an Elastic IP Address to your EC2 instance. [Read about it here](http://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/getting-started-assign-eip.html).
 
 ### Step 2: Install Swift on Ubuntu Server
+
+* Connect to your Ubuntu Server via SSH using Terminal (see above).
+
+* View the Latest Swift snapshots [here](https://swift.org/download/#latest-development-snapshots).  Copy the url for the __Linux__ Platform for your target Ubuntu version.  
+
+* Download the target snapshot. 
+
+````
+    $ wget [your-target-Swift-snapshot]
+````
+
+For example, at the time of this writing, we found the following for Ubuntu 14.04 __https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz__.  Then the command would be:
+
+````
+    $ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+````
 
 ### Step 3: Install Server-side Framework for Creating Web Services using Swift (Perfect)
 
