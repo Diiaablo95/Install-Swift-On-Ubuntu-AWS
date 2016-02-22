@@ -55,7 +55,7 @@ This repo is a Step-by-Step Guide for:
     $ ssh -i [MyKeyPair].pem ubuntu@[MyPublicDNS]
 ````
 
-For example, if your key pair is called __UbuntuSwiftKey.pem__ and your Ubuntu Server's Public DNS is __ec2-54-213-187-216.us-west-2.compute.amazonaws.com__.  Then you can connect wiht the following:
+For example, if your key pair is called __UbuntuSwiftKey.pem__ and your Ubuntu Server's Public DNS is __ec2-54-213-187-216.us-west-2.compute.amazonaws.com__.  Then you can connect with the following:
 
 ````
     $ ssh -i UbuntuSwiftKey.pem ubuntu@ec2-54-213-187-216.us-west-2.compute.amazonaws.com
@@ -65,9 +65,9 @@ For example, if your key pair is called __UbuntuSwiftKey.pem__ and your Ubuntu S
 
 ![ubuntu-welcome](imgs/ubuntu-welcome.png)
 
-Other things to consider not covered here:
-* Updating your Security Group to only allow connections from your computer.
-* Using Elastic IPs.
+Other things you may consider that we have not covered here:
+* Updating your Security Group to only allow connections from your computer [read about it here](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html)
+* Assinging an Elastic IP Address to your EC2 instance [read about it here](http://docs.aws.amazon.com/AmazonVPC/latest/GettingStartedGuide/getting-started-assign-eip.html).
 
 ### Step 2: Install Swift on Ubuntu Server
 
