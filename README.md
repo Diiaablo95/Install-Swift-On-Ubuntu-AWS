@@ -6,7 +6,7 @@ This repo is a Step-by-Step Guide for:
 
 ![swift-ubuntu-terminal](imgs/swift-ubuntu-terminal.png)
 
-### Step 1: Create an EC2 Server Instance (Ubuntu 14.04)
+### Step 1: Create an EC2 Server Instance (Ubuntu Server 14.04)
 
 * To create an Ubuntu Server on AWS - EC2, you must first sign up for an AWS account [here](https://aws.amazon.com/premiumsupport/signup/).
 
@@ -28,7 +28,7 @@ This repo is a Step-by-Step Guide for:
 
 ![aws-instance-type](imgs/aws-instance-type.png)
 
-* Review the EC2 Instance details then click the __Launch__ button.  You will be prompted to select an existing key pair or create a new one.  Note, a key pair is __required__ to connect to your server.  If you don't have one, choose __Create a new key pair__.  Provide a name.  Finally, click the __Download_Key_Pair__.
+* Review the EC2 Instance details then click the __Launch__ button.  You will be prompted to select an existing key pair or create a new one.  Note, a key pair is __required__ to connect to your server.  If you don't have one, choose __Create a new key pair__.  Provide a name and click the __Download_Key_Pair__.  After your keypair is downloaded (it has a .pem file extension), click __Launch Instance__ (see screenshot below).
 
 ![aws-create-keypair](imgs/aws-create-keypair.png)
 
