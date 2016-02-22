@@ -83,7 +83,7 @@ Note, other things you may consider that we have not covered here:
     $ wget [your-target-Swift-snapshot]
 ````
 
-For example, at the time of this writing, we found the following for Ubuntu: 14.04:
+For example, at the time of this writing, we found the following for snapshot URL for Ubuntu: 14.04:
 
 __https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz__.  
 
@@ -91,6 +91,47 @@ Thus the command would be:
 
 ````
     $ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+````
+
+* Extract the snapshot.
+
+````
+     $ tar -xvzf [your-swift-snapshot]
+````
+
+For example:
+
+````
+    $ tar -xvzf swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+````
+
+* Export path.
+
+````
+    $ export PATH=/path/to/Swift/usr/bin:"${PATH}"
+
+````
+
+For example:
+
+````
+    $ cd swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin
+    $ pwd
+    $ export PATH=/home/ubuntu/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin:$PATH
+````
+
+* Install Swift. 
+
+````
+    $ cd ~
+    $ sudo apt-get update
+    $ sudo apt-get install clang libicu-dev
+````
+
+* Confirm Swift Install.
+
+````
+    $ swift --version
 ````
 
 ### Step 3: Install Server-side Framework for Creating Web Services using Swift (Perfect)
