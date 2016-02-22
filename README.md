@@ -18,11 +18,15 @@ This repo is a Step-by-Step Guide for:
 
 * In the __EC2 Dashboard__, click the __Launch Instance__ button (see screenshot below).
 
-![aws-ec2](imgs/aws-launch-instance.png)
+![aws-launch-instance](imgs/aws-launch-instance.png)
 
 * Choose the Amazon Machine Image (AMI) named __Ubuntu Server 14.04 LTS (HVM), SSD Volume Type - ami-9abea4fb__ (see screenshot below).
 
-![aws-ec2](imgs/aws-ubuntu-ami.png)
+![aws-ubuntu-ami](imgs/aws-ubuntu-ami.png)
+
+* Choose an Instance Type.  You can learn more about different EC2 Instance types [here](https://aws.amazon.com/ec2/instance-types/). Note, as you increase the properties of your instance (e.g. increase CPU, Memory, etc.) you will be charged more per hour.  We will choose the Type: __t2.micro__ (see screenshot below).
+
+![aws-instance-type](imgs/aws-instance-type.png)
 
 ### Step 2: Install Swift on Ubuntu Server
 
