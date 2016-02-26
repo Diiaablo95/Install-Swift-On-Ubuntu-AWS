@@ -76,6 +76,13 @@ Note, other things you may consider that we have not covered here:
 
 * If needed, connect to your Ubuntu Server via SSH using Terminal (see above).
 
+* Install dependencies
+
+````
+    $ sudo apt-get update
+    $ sudo apt-get install clang
+````
+
 * For quickness and ease, we will start by using an Apple provided snapshot of Swift that we can install on Ubuntu Server 14.04.  View the Latest Swift snapshots [here](https://swift.org/download/#latest-development-snapshots).  Copy the url for the Ubuntu 14.04 snapshot.  
 
 * Download the target snapshot from Apple using the wget command. 
@@ -84,7 +91,7 @@ Note, other things you may consider that we have not covered here:
     $ wget [your-target-Swift-snapshot]
 
     For example:
-    $ wget https://swift.org/builds/swift-2.2-branch/ubuntu1404/swift-2.2-SNAPSHOT-2016-02-08-a/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+    $ wget https://swift.org/builds/development/ubuntu1404/swift-DEVELOPMENT-SNAPSHOT-2016-02-25-a/swift-DEVELOPMENT-SNAPSHOT-2016-02-25-a-ubuntu14.04.tar.gz
 ````
 
 * Extract the snapshot using the tar command.
@@ -93,7 +100,7 @@ Note, other things you may consider that we have not covered here:
     $ tar -xvzf [your-swift-snapshot]
 
     For example:
-    $ tar -xvzf swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04.tar.gz
+    $ tar -xvzf swift-DEVELOPMENT-SNAPSHOT-2016-02-25-a-ubuntu14.04.tar.gz
 ````
 
 * Update the PATH environment variable.
@@ -102,20 +109,12 @@ Note, other things you may consider that we have not covered here:
     $ export PATH=/path/to/Swift/usr/bin:"${PATH}"
 
     For example:
-    $ cd swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin
+    $ cd swift-DEVELOPMENT-SNAPSHOT-2016-02-25-a-ubuntu14.04/usr/bin
     $ pwd
-    $ export PATH=/home/ubuntu/swift-2.2-SNAPSHOT-2016-02-08-a-ubuntu14.04/usr/bin:$PATH
+    $ export PATH=/home/ubuntu/swift-DEVELOPMENT-SNAPSHOT-2016-02-25-a-ubuntu14.04/usr/bin:$PATH
 ````
 
-* Install Swift. 
-
-````
-    $ cd ~
-    $ sudo apt-get update
-    $ sudo apt-get install clang
-````
-
-* Confirm Swift Is Installed.
+* Confirm the Swift snapshot is running.
 
 ````
     $ swift --version
