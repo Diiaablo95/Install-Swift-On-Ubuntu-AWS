@@ -2,7 +2,7 @@
 
 This repo is a Step-by-Step Guide for:
 * Standing up an Ubuntu Server (14.04) using Amazon Web Services [(AWS)](https://aws.amazon.com/) - Elastic Compute Cloud [(EC2).](https://aws.amazon.com/ec2/?nc2=h_l3_c)
-* Installing [Swift](https://developer.apple.com/swift/) on Ubuntu Server. 
+* Installing [Swift](https://developer.apple.com/swift/) on Ubuntu Server.
 * Playing with Server Side Swift via the [Swift REPL](https://developer.apple.com/swift/blog/?id=18).
 
 ![swift-ubuntu-terminal](imgs/swift-ubuntu-terminal.png)
@@ -85,7 +85,7 @@ Note, other things you may consider that we have not covered here:
 
 * For quickness and ease, we will start by using an Apple provided snapshot of Swift that we can install on Ubuntu Server 14.04.  View the Latest Swift snapshots [here](https://swift.org/download/#latest-development-snapshots).  Copy the url for the Ubuntu 14.04 snapshot.  
 
-* Download the target snapshot from Apple using the wget command. 
+* Download the target snapshot from Apple using the wget command.
 
 ````
     $ wget [your-target-Swift-snapshot]
@@ -120,6 +120,16 @@ Note, other things you may consider that we have not covered here:
     $ swift --version
 ````
 
+  * If you are getting an error similar to ***swift: /usr/lib/x86_64-linux-gnu/libstdc++.so.6: version `GLIBCXX_3.4.22' not found (required by swift)***,<br>
+  run the following commands in the terminal:
+  ````
+    $ sudo apt-get install libstdc++6
+    $ sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    $ sudo apt-get update
+    $ sudo apt-get upgrade
+    $ sudo apt-get dist-upgrade
+  ````
+
 ### Step 3: Playing with Server Side Swift using the Swift REPL
 
 * In Terminal, launch the __Read Eval Print Loop (i.e. REPL)__ by executing the swift command.  This will let us play with Swift on the Server via Terminal.
@@ -145,7 +155,7 @@ Note, other things you may consider that we have not covered here:
 * Exit the REPL.
 
 ````
-    $ q: 
+    $ q:
 ````
 
 ### Clean Up
